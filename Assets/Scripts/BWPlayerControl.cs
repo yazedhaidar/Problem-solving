@@ -25,7 +25,7 @@ public class BWPlayerControl : MonoBehaviour
     // Batas kiri dan kanan game scene (Batas bawah menggunakan minus (-))
     public static float xBoundary = 25.1f;
 
-    // Rigidbody 2D raket ini
+    // Rigidbody 2D bola ini
     private Rigidbody2D rigidBody2D;
 
     // Start is called before the first frame update
@@ -64,6 +64,7 @@ public class BWPlayerControl : MonoBehaviour
             velocity.x = -speed;
         }
 
+
         // Jika pemain tidak menekan tombol apa-apa, kecepatannya nol.
         else
         {
@@ -73,6 +74,9 @@ public class BWPlayerControl : MonoBehaviour
 
         // Masukkan kembali kecepatannya ke rigidBody2D.
         rigidBody2D.velocity = velocity;
+        
+
+
         getPosition();
 
       
