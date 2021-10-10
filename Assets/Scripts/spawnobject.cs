@@ -11,9 +11,15 @@ public class spawnobject : MonoBehaviour
     void Start()
     {
         //Mengeksekusi fungs Spawn setiap beberapa detik sesui dengan nilai spawnTime
-        InvokeRepeating("Spawn", spawnTime, spawnTime);
+        Spawn();
+        //InvokeRepeating("Spawn", spawnTime, spawnTime);
     }
 
+    private void Update()
+    {
+        
+        
+    }
 
     void Spawn()
     {
@@ -21,9 +27,14 @@ public class spawnobject : MonoBehaviour
 
         //Mendapatkan nilai random
         int spawnPointIndex = Random.Range(0, spawnPoints.Length);
+        
+          
+            //Memduplikasi enemy
+            Instantiate(box, BoxPosition, spawnPoints[spawnPointIndex].rotation);
+        
+        
 
-        //Memduplikasi enemy
-        Instantiate(box, BoxPosition, spawnPoints[spawnPointIndex].rotation);
+       
     }
-    
+
 }

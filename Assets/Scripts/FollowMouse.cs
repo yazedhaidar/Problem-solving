@@ -15,9 +15,10 @@ public class FollowMouse : MonoBehaviour
     // Rigidbody 2D bola ini
     private Rigidbody2D rigidBody2D;
 
-    
-    
-   
+    public ScoreController Score;
+
+    public int addscore = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -101,6 +102,13 @@ public class FollowMouse : MonoBehaviour
     }
 
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Destroy(collision.gameObject);
+      
+        Score.IncreaseCurrentScore(addscore);
+        
+    }
 
 
 }
