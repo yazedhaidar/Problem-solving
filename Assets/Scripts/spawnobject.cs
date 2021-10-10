@@ -11,8 +11,8 @@ public class spawnobject : MonoBehaviour
     void Start()
     {
         //Mengeksekusi fungs Spawn setiap beberapa detik sesui dengan nilai spawnTime
-        Spawn();
-        //InvokeRepeating("Spawn", spawnTime, spawnTime);
+       
+        InvokeRepeating("Spawn", spawnTime, spawnTime);
     }
 
     private void Update()
