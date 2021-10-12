@@ -7,20 +7,28 @@ public class spawn : MonoBehaviour
     public GameObject[] box;
     public float spawnTime = 3f;
     public Transform[] spawnPoints;
+    private int count = 0;
 
     void Start()
     {
         //Mengeksekusi fungs Spawn setiap beberapa detik sesui dengan nilai spawnTime
         
         Spawn();
-        Spawn();
-        Spawn();
+       
     }
-
+     void Update()
+    {
+        
+        if(count<=3)
+        {
+            Spawn();
+            count += 1;
+        }
+    }
 
     void Spawn()
     {
-        Vector3 BoxPosition = new Vector3(Random.Range(-19f, 19f), Random.Range(-7f, 7f), 0f);
+        Vector3 BoxPosition = new Vector3(Random.Range(-14f, 14f), Random.Range(-6.5f, 6.5f), 0f);
 
         //Mendapatkan nilai random
         int spawnPointIndex = Random.Range(0, spawnPoints.Length);

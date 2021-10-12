@@ -10,7 +10,7 @@ public class mousemove7 : MonoBehaviour
     public static float yBoundary = 9.0f;
 
     // Batas kiri dan kanan game scene (Batas bawah menggunakan minus (-))
-    public static float xBoundary = 19.7f;
+    public static float xBoundary = 16.8f;
 
 
     // Rigidbody 2D bola ini

@@ -19,7 +19,7 @@ public class spawn2 : MonoBehaviour
 
     void Spawn()
     {
-        Vector3 BoxPosition = new Vector3(Random.Range(-19f, 19f), Random.Range(-7f, 7f), 0f);
+        Vector3 BoxPosition = new Vector3(Random.Range(-15.5f, 15.5f), Random.Range(-6.5f, 6.5f), 0f);
 
         //Mendapatkan nilai random
         int spawnPointIndex = Random.Range(0, spawnPoints.Length);
