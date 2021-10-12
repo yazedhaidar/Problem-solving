@@ -5,16 +5,28 @@ using UnityEngine.UI;
 public class UIScore : MonoBehaviour
 {
     [Header("UI")]
-    public Text score;
-    
+    public Text highScore;
+    public Text currentScore;
 
-    [Header("Score")]
-    public ScoreController scoreController;
+
+  
+ 
 
     // Update is called once per frame
     void Update()
     {
-        score.text = scoreController.GetCurrentScore().ToString();
-       
+        highScore.text = ScoreController.Instance.HighScore.ToString();
+        currentScore.text = ScoreController.Instance.CurrentScore.ToString();
+
+    }
+
+    public void Show()
+    {
+        gameObject.SetActive(true);
+    }
+
+    public void Hide()
+    {
+        gameObject.SetActive(false);
     }
 }

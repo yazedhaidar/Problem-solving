@@ -11,7 +11,7 @@ public class BallControl : MonoBehaviour
     public float xInitialForce;
     public float yInitialForce;
 
-    void ResetBall()
+    public void ResetBall()
     {
         //ubah posisi bola jadi(0.0)
         transform.position = Vector2.zero;

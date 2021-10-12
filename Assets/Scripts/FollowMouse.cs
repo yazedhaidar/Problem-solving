@@ -15,9 +15,14 @@ public class FollowMouse : MonoBehaviour
     // Rigidbody 2D bola ini
     private Rigidbody2D rigidBody2D;
 
-    public ScoreController Score;
+    public spawnobject spawn;
+    public AudioSource HitAudio;
+
+    private bool check = false;
+    
 
     public int addscore = 0;
+    float Timer = 0f;
 
 
     // Start is called before the first frame update
@@ -31,6 +36,7 @@ public class FollowMouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
        
         Vector2 CursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector2(CursorPos.x, CursorPos.y);
@@ -96,7 +102,7 @@ public class FollowMouse : MonoBehaviour
             transform.position = new Vector2(CursorPos.x, CursorPos.y);
         }
 
-        
+      
 
 
     }
@@ -104,11 +110,26 @@ public class FollowMouse : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+        HitAudio.Play();
         Destroy(collision.gameObject);
-      
-        Score.IncreaseCurrentScore(addscore);
+        addscore = collision.tag == "GO1" ? 4 : collision.tag == "GO2" ? 2 : collision.tag == "GO3" ? 1 :0 ;
+       
+
+        spawn.SpawnAfterDestroy();
+
+
+
+        ScoreController.Instance.IncreaseCurrentScore(addscore);
+       if(GameFlowManager.Instance.IsGameOver)
+        {
+            Time.timeScale = 0f;
+            return;
+        }
         
     }
+
+   
 
 
 }
