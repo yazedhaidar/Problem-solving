@@ -8,7 +8,7 @@ public class Mousemove : MonoBehaviour
     public static float yBoundary = 9.0f;
 
     // Batas kiri dan kanan game scene (Batas bawah menggunakan minus (-))
-    public static float xBoundary = 25.3f;
+    public static float xBoundary = 24.7f;
 
 
     // Rigidbody 2D raket ini
