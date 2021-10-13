@@ -353,11 +353,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 474909499}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24babb1518b672e418f88b60f0bcb23b, type: 3}
+  m_Script: {fileID: 11500000, guid: e4062f9f4d36950448c32ab42f3bdc5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Score: {fileID: 545313433}
   addscore: 1
+  check: 0
+  Spawn: {fileID: 406877771}
 --- !u!50 &474909503
 Rigidbody2D:
   serializedVersion: 4
