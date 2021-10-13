@@ -7,7 +7,7 @@ public class spawn2 : MonoBehaviour
     public GameObject[] box;
     public float spawnTime = 3f;
     public Transform[] spawnPoints;
-    public Collider2D[ Collider;
+ 
     
 
     void Start()
